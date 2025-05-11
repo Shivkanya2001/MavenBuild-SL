@@ -14,12 +14,8 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'
-        cache: maven
+        distribution: 'temurin'  # use 'temurin' instead of 'adopt'
 
-    - name: Set JAVA_HOME environment variable
-      run: echo "JAVA_HOME=/usr/lib/jvm/adoptopenjdk-17-hotspot-amd64" >> $GITHUB_ENV
-    
     - name: Build the code
       run: mvn package
 
@@ -27,4 +23,3 @@ jobs:
       uses: snyk/actions/maven@master
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        JAVA_HOME: /usr/lib/jvm/adoptopenjdk-17-hotspot-amd64
