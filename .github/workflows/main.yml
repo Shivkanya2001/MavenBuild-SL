@@ -19,7 +19,7 @@ jobs:
     - name: connect to LAb and deploy code on tomcat9
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest
       with:
-       host: '13.233.135.136'
+       host: '13.200.210.251'
        user: 'labuser'
        pass: 'Nuvelabs123$'
        port: 22
@@ -33,7 +33,7 @@ jobs:
     - name: Connect to Lab machine and trigger a Jenkins job 
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest
       with:
-        host: '43.205.118.149'
+        host: '13.200.210.251'
         user: 'labuser'
         pass: 'Nuvelabs123$'
         port: 22
