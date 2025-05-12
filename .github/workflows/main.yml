@@ -1,5 +1,8 @@
 name: CICD with End project
-on: workflow_call
+on:
+ push:
+  branches:
+   - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
